@@ -1,10 +1,10 @@
 import asyncio
-from trae_agent.agent.trae_agent import TraeAgent
-from trae_agent.utils.config import Config
-from trae_agent.utils.llm_basics import LLMMessage
+from ved_agent.agent.ved_agent import vedAgent
+from ved_agent.utils.config import Config
+from ved_agent.utils.llm_basics import LLMMessage
 from .mcp import MCP
 
-class MCPAgent(TraeAgent):
+class MCPAgent(vedAgent):
     def __init__(self, role: str, system_prompt: str, allowed_tools: list[str]):
         agent_config = Config({"default_provider": "anthropic", "max_steps": 25})
         super().__init__(agent_config)
