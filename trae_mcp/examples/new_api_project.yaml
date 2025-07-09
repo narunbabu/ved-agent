@@ -1,0 +1,8 @@
+- agent: builder
+  description: "Create a new file 'main.py' with a basic FastAPI hello world endpoint and a simple pytest test for it in 'test_main.py'."
+
+- agent: qa
+  description: "Run 'pip install fastapi uvicorn pytest httpx' and then run 'pytest' to ensure the test passes."
+
+- agent: devops
+  description: "Create a Dockerfile that exposes port 8000 and runs the FastAPI application using uvicorn."
